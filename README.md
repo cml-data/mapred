@@ -16,3 +16,17 @@ mapred streaming \
   -file mapper.py \
   -file reducer.py
 ```
+
+
+2nd version written in bash (mapper.sh and reducer.sh)
+Performance is much slower than the Python version.  Much stricter in removing strings with unwanted characters.
+
+```
+mapred streaming \
+  -input <path to text files> \
+  -output <path to output directory> \
+  -mapper mapper.sh \
+  -reducer reducer.sh \
+  -file mapper.sh \
+  -file reducer.sh
+```
